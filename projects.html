@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="test-header">
+    <div class="test-logo">
+      <img src="image/icons8-クラウド-100.png" alt="アイコン" width="50" />
+      <a href="index.html" class="logo-link"><p>My Portfolio</p></a>
+    </div>
+    <button class="menu-toggle">&#9776;</button>
+    <nav class="test-nav">
+      <ul>
+      <li><a href="index.html">About</a></li>
+        <li><a href="../public/projects.html">Projects</a></li>
+        <li><a href="../public/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2 class="text-center">Projects</h2>
+    <section class="projects">
+      <div class="project">
+        <h3>Webサイト</h3>
+        <p>授業課題</p>
+        <ul>
+          <li><a href="demo1/index.html" target="_blank">デモ</a></li>
+          <li><img src="demo1.png" alt="デモ画像" width="300" /></li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h3>共同制作</h3>
+        <p>旅行サイト</p>
+        <ul>
+          <li><a href="http://localhost/demo2/index.php" target="_blank">デモ</a></li>
+          <li><img src="image/demo2.png" alt="デモ画像" width="300" /></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center">&copy; 2025 uchino</footer>
+
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('.test-nav').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
