@@ -1,0 +1,375 @@
+@charset "utf-8";
+
+/* ===================== ポートフォリオサイトCSS ===================== */
+
+/* 全体共通設定 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #25271F;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ヘッダー */
+.test-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #769CBF;
+  position: relative;
+  z-index: 100;
+  height: 80px;
+}
+
+.test-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.test-logo p {
+  font-size: 25px;
+  padding-left: 20px;
+  color: #E6E5E4;
+}
+
+.test-logo img {
+  height: 50px;
+}
+
+/* ロゴリンク */
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+}
+.logo-link:hover {
+  text-decoration: underline;
+}
+
+/* ナビゲーション */
+.test-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.test-nav ul li {
+  margin-right: 20px;
+}
+
+.test-nav ul li a {
+  color: #004f99a6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ハンバーガーボタン（通常画面では非表示） */
+.menu-toggle {
+  display: none; /* 通常の画面サイズでは非表示 */
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #E6E5E4;
+}
+
+/* メインコンテンツ */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* canvas */
+canvas {
+  margin-bottom: 20px;
+}
+
+/* ロゴテキスト */
+.logo-text {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: #000;
+  line-height: 1.2;
+}
+
+.logo-text .tech {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.logo-text .osaka {
+  font-size: 16px;
+  letter-spacing: 6px;
+}
+
+/* About用 */
+h2 {
+  margin: 30px;
+}
+
+.about {
+  max-width: 600px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.about ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.profile-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin: 20px 0 8px 0;
+  padding-left: 0;
+}
+
+.project p,
+.about p {
+  margin: 0 0 15px 0;
+  padding-left: 0;
+  line-height: 1.6;
+}
+
+/* Contact用 */
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 80vh;
+  margin: 0 auto;
+  position: relative;
+  padding: 20px;
+}
+
+.con {
+  margin: 20px;
+}
+
+.contact ul li {
+  list-style: none;
+}
+
+/* Projects用 */
+.projects {
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto 40px auto;
+  padding: 10px;
+  text-align: left;
+}
+
+.project {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+
+.project h3 {
+  margin: 0 0 10px 0;
+  padding-left: 0;
+  color: #36454F;
+}
+
+.project p {
+  color: #555;
+}
+
+.project ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.project ul li {
+  margin: 0;
+}
+
+.project ul li a {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #769CBF;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.project ul li a:hover {
+  background-color: #5a7a9f;
+}
+
+.project ul li img {
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 100%;
+  height: auto;
+}
+
+/* フッター */
+footer {
+  width: 100%;
+  padding: 20px;
+  background-color: #769CBF;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* ------------------------- レスポンシブ対応 -------------------------- */
+@media (max-width: 768px) {
+  /* ハンバーガーメニューボタンがレスポンシブ時に表示される */
+  .menu-toggle {
+    display: block; /* 画面が小さい場合に表示 */
+    position: absolute;
+    top: 22px;
+    right: 30px;
+    z-index: 1000;
+  }
+
+  /* メニューアイテム（test-nav） */
+  .test-nav {
+    display: none; /* 初期状態で非表示 */
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%); /* 画面外から始まる */
+    transition: transform 0.3s ease-in-out; /* スライドインアニメーション */
+  }
+
+  .test-nav.open {
+    display: flex;
+    transform: translateX(0); /* 画面内にスライドイン */
+  }
+
+  .test-nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .test-nav ul li {
+    opacity: 0;
+    transform: translateX(30px); /* 右からスライドイン */
+    transition: all 0.3s ease-out;
+  }
+
+  .test-nav.open ul li {
+    opacity: 1;
+    transform: translateX(0); /* スライドインして元の位置に */
+  }
+
+  .test-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .test-logo {
+    margin-bottom: 10px;
+  }
+}
+
+/* ===================== イントロ画面用CSS ===================== */
+
+/* イントロ画面全体 */
+#intro {
+  position: fixed;
+  inset: 0;
+  background: #769CBF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 1s ease;
+}
+
+/* フェードアウト用クラス */
+#intro.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ロゴテキスト */
+.logo-text {
+  margin-top: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #25271F;
+  user-select: none;
+  cursor: pointer;
+}
+.logo-text .tech {
+  font-size: 24px;
+  font-weight: bold;
+}
+.logo-text .osaka {
+  font-size: 18px;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+
+/* クリック案内 */
+#click-guide {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+  opacity: 0.7;
+  user-select: none;
+  font-family: Arial, sans-serif;
+  display: none;
+  cursor: pointer;
+}
+
+/* メインコンテンツはイントロ非表示後に見える */
+main, header, footer {
+  visibility: hidden;
+}
+
+/* イントロフェードアウト後に表示 */
+#intro.fade-out ~ header,
+#intro.fade-out ~ main,
+#intro.fade-out ~ footer {
+  visibility: visible;
+}
