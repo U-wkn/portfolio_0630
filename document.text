@@ -1,0 +1,4 @@
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+npm init -y
+npm install express socket.io
+node server.js
